@@ -13,6 +13,7 @@ CMakeUserPresets.json
 cmake-build-debug
 data/dataset.csv
 build
+.idea  
 
 # CLion
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
