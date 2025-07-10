@@ -4,7 +4,23 @@
 
 ### **Descripción**
 
-> Ejemplo: Implementación de una red neuronal multicapa en C++ para clasificación de dígitos manuscritos.
+Implementación de una red neuronal multicapa en C++ desde cero, enfocada en resolver un problema de clasificación binaria en un espacio bidimensional. El modelo debe aprender a determinar si un punto (x, y) pertenece o no a una región con forma de anillo.
+
+La región está definida por dos radios: r_min y r_max, clasificando como clase 1 aquellos puntos que cumplen la condición:
+
+r_min² < x² + y² < r_max²
+
+Por ejemplo, con r_min = 0.5 y r_max = 1.0, los puntos válidos se ubican en el rango:
+
+0.25 < x² + y² < 1.0
+
+Entradas: 2 valores (x, y)
+
+Salida esperada: 1 valor (0 = fuera del anillo, 1 = dentro del anillo)
+
+Ventaja: Se puede graficar fácilmente tanto el dataset como las predicciones del modelo.
+
+
 
 ### Contenidos
 
@@ -27,7 +43,7 @@
 * **Integrantes**:
 
   * Fatima Isabella Pacheco Vera – 202410182 (Responsable de investigación teórica)
-  * Daniela Valentina Villacorta Sotelo –  202410253 (Desarrollo de la arquitectura)
+  * Daniela Valentina Villacorta Sotelo –  202410253 (Desarrollo de la arquitectura)La 
   * Valentin Tuesta – 202410251 (Implementación del modelo)
   * Emma Anderson Gonzalez  – 202410607 (Pruebas y benchmarking)
   * Alumno E – 209900005 (Documentación y demo)
@@ -63,9 +79,15 @@
 * **Objetivo**: Explorar fundamentos y arquitecturas de redes neuronales.
 * **Contenido de ejemplo**:
 
-  1. Historia y evolución de las NNs.
-  2. Principales arquitecturas: MLP, CNN, RNN.
-  3. Algoritmos de entrenamiento: backpropagation, optimizadores.
+1. Fundamentos de redes neuronales artificiales
+
+2. Clasificación binaria y no lineal
+
+3. Funciones de activación (ReLU, Sigmoid)
+
+4. Algoritmo de retropropagación
+
+5. Uso de redes densas en tareas de separación geométrica
 
 ---
 
@@ -77,13 +99,25 @@
 * **Estructura de carpetas (ejemplo)**:
 
   ```
-  proyecto-final/
-  ├── src/
-  │   ├── layers/
-  │   ├── optimizers/
-  │   └── main.cpp
-  ├── tests/
-  └── docs/
+proyecto-final/
+├── data/
+│   └── dataset.csv
+├── src/
+│   ├── include/
+│   │   ├── neural_network.h
+│   │   ├── nn_activation.h
+│   │   ├── nn_dense.h
+│   │   ├── nn_interfaces.h
+│   │   ├── nn_loss.h
+│   │   ├── nn_optimizer.h
+│   │   └── tensor.h
+│   └── main.cpp
+├── tools/
+│   └── gen_dataset.cpp
+├── .gitignore
+├── CMakeLists.txt
+└── README.md
+
   ```
 
 #### 2.2 Manual de uso y casos de prueba
@@ -109,45 +143,47 @@
 > 3. Evaluar resultados con script de validación.
 
 ---
-
+La 
 ### 4. Análisis del rendimiento
 
 * **Métricas de ejemplo**:
 
   * Iteraciones: 1000 épocas.
-  * Tiempo total de entrenamiento: 2m30s.
-  * Precisión final: 92.5%.
+  * Tiempo total de entrenamiento: 63.5892 segundos
+  * Precisión final: 71.65%.
+
 * **Ventajas/Desventajas**:
 
   * * Código ligero y dependencias mínimas.
   * – Sin paralelización, rendimiento limitado.
+
 * **Mejoras futuras**:
 
-  * Uso de BLAS para multiplicaciones (Justificación).
-  * Paralelizar entrenamiento por lotes (Justificación).
+  * Implementar visualización integrada en C++
 
 ---
 
 ### 5. Trabajo en equipo
 
-| Tarea                     | Miembro  | Rol                       |
-| ------------------------- | -------- | ------------------------- |
-| Investigación teórica     | Alumno A | Documentar bases teóricas |
-| Diseño de la arquitectura | Alumno B | UML y esquemas de clases  |
-| Implementación del modelo | Alumno C | Código C++ de la NN       |
-| Pruebas y benchmarking    | Alumno D | Generación de métricas    |
-| Documentación y demo      | Alumno E | Tutorial y video demo     |
+| Tarea                   | Miembro  | Rol                               |
+| ----------------------- | -------- | --------------------------------- |
+| Investigación teórica   | Fatima   | Documentación y marco teórico     |
+| Diseño de arquitectura  | Daniela  | Organización de archivos y clases |
+| Lógica del clasificador | Valentin | Implementación de red y condición |
+| Pruebas y benchmarking  | Emma     | Métricas y validación final       |
+| Documentación y dataset | Alumno E | README y generación de datos      |
 
-> *Actualizar con tareas y nombres reales.*
+
 
 ---
 
 ### 6. Conclusiones
 
-* **Logros**: Implementar NN desde cero, validar en dataset de ejemplo.
-* **Evaluación**: Calidad y rendimiento adecuados para propósito académico.
-* **Aprendizajes**: Profundización en backpropagation y optimización.
-* **Recomendaciones**: Escalar a datasets más grandes y optimizar memoria.
+Se logró construir un clasificador funcional basado en red neuronal que diferencia puntos dentro o fuera de una región en forma de anillo.
+
+El proyecto permitió afianzar conocimientos sobre retropropagación, estructuras modulares y compilación avanzada en C++.
+
+El trabajo colaborativo fue clave para dividir responsabilidades y mantener un flujo ordenado de desarrollo.
 
 ---
 
