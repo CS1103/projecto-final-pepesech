@@ -98,7 +98,8 @@ Ventaja: Se puede graficar fácilmente tanto el dataset como las predicciones de
 * **Patrones de diseño**: ejemplo: Factory para capas, Strategy para optimizadores.
 * **Estructura de carpetas (ejemplo)**:
 
-  ``
+
+```
 proyecto-final/
 ├── data/
 │   └── dataset.csv
@@ -115,10 +116,9 @@ proyecto-final/
 ├── tools/
 │   └── gen_dataset.cpp
 ├── .gitignore
-├── CMakeLists.txt
-└── README.md
+├
 
-  ``
+```
 
 #### 2.2 Manual de uso y casos de prueba
 
