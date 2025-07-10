@@ -26,10 +26,10 @@
 * **Grupo**: `group_3_custom_name`
 * **Integrantes**:
 
-  * Alumno A – 209900001 (Responsable de investigación teórica)
-  * Alumno B – 209900002 (Desarrollo de la arquitectura)
-  * Alumno C – 209900003 (Implementación del modelo)
-  * Alumno D – 209900004 (Pruebas y benchmarking)
+  * Fatima Isabella Pacheco Vera – 202410182 (Responsable de investigación teórica)
+  * Daniela Valentina Villacorta Sotelo –  202410253 (Desarrollo de la arquitectura)
+  * Valentin Tuesta – 202410251 (Implementación del modelo)
+  * Emma Anderson Gonzalez  – 202410607 (Pruebas y benchmarking)
   * Alumno E – 209900005 (Documentación y demo)
 
 > *Nota: Reemplazar nombres y roles reales.*
